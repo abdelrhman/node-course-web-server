@@ -34,6 +34,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    title: 'this is projects screen',
+    year: new Date().getFullYear()
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     message: 'error '
